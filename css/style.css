@@ -1,0 +1,53 @@
+html {
+    font-family: ;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+#locDisplay {
+    font-size: 4rem;
+}
+
+#appContainer {
+    width: 65vw;
+    height: auto;
+    align-items: center;
+    border-radius: 1.5rem;
+    background-color: darkolivegreen;
+}
+
+#locDisplay {
+    width: 100%;
+    height: 25%;
+    font-size: 4rem;
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+}
+
+#tempSection {
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    height: 50%;
+    font-size: 4rem;
+    color: white;
+}
