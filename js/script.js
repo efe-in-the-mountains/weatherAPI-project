@@ -1,41 +1,75 @@
 $(document).ready(function() {
+    
+    var icon = document.getElementById("owfIcon");
+    var city = document.getElementById("cityDisplay");
+    var country = document.getElementById("countryDisplay");
+    var highs = document.getElementById("highs");
+    var lows = document.getElementById("lows");
+    var currentTempDisplay = document.getElementById("tempDisplay");
+    var fButton = document.getElementById("fahrBtn");
+    var cButton = document.getElementById("celsBtn");
 
-var icon = document.getElementById("weatherIcon");
-var locationDisplay = document.getElementById("locDisplay");
-var currentTempDisplay = document.getElementById("tempDisplay");
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
+    
+    
+    var options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
+    
+    
+    // functions for geolocation
+    function success(pos) {
+      var crd = pos.coords;
+      var lat = pos.coords.latitude;
+      var long = pos.coords.longitude;
+      var api = "https://fcc-weather-api.glitch.me/api/current?lat=" + lat + "&lon=" + long;
+    
+      $.ajax({
+        dataType: "json",
+        url: api,
+        //data: {},
+        success: function(data) {
+          
+          var rawJson = JSON.stringify(data);
+          data = JSON.parse(rawJson);
 
+          console.dir(data);
 
-// functions for geolocation
-function success(pos) {
-  var crd = pos.coords;
-  var lat = pos.coords.latitude;
-  var long = pos.coords.longitude;
-  var api = "https://fcc-weather-api.glitch.me/api/current?lat=" + lat + "&lon=" + long;
+          city.textContent = data.name;
+          country.textContent = data.sys.country;
+          toFahr();
+          icon.classList.add("owf-" + data.weather[0].id);
 
-  $.getJSON(api, function(data) {
+          function toFahr() {
+            currentTempDisplay.textContent = Math.floor((data.main.temp * 1.8) + 32);
+            highs.textContent = Math.floor((data.main.temp_max * 1.8) + 32);
+            lows.textContent = Math.floor((data.main.temp_min * 1.8) + 32);
+          }
+      
+          function toCels() {
+            currentTempDisplay.textContent = Math.floor(data.main.temp);
+            highs.textContent = Math.floor(data.main.temp_max);
+            lows.textContent = Math.floor(data.main.temp_min);
+          }
+      
+          fButton.addEventListener("click", function() {
+            toFahr();
+          })
+      
+          cButton.addEventListener("click", function () {
+            toCels();      
+          })
 
-    console.dir(data);
-    locationDisplay.textContent = data.name + ", " + data.sys.country;
-    currentTempDisplay.textContent = Math.floor(data.main.temp) + " ";
-    icon.classList.add("owf-" + data.weather[0].id);
+    }
+})
 
-  });
-  // console.log('Your current position is:');
-  // console.log(`Latitude : ${crd.latitude}`);
-  // console.log(`Longitude: ${crd.longitude}`);
-  // console.log(`More or less ${crd.accuracy} meters.`);
-}
-
-function error(err) {
-    console.warn('ERROR(${err.code}): ${err.message}');
-}
-
-navigator.geolocation.getCurrentPosition(success, error, options);
-
-
-});
+      }
+    
+    function error(err) {
+        console.warn('ERROR(${err.code}): ${err.message}');
+    }
+    
+    navigator.geolocation.getCurrentPosition(success, error, options);
+      
+    });
