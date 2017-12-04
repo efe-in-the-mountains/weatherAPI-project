@@ -68,6 +68,7 @@ $(document).ready(function() {
     
     function error(err) {
         console.warn('ERROR(${err.code}): ${err.message}');
+        city.textContent = "reload, please";
     }
     
     navigator.geolocation.getCurrentPosition(success, error, options);
