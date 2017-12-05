@@ -5,19 +5,23 @@ html {
 .currentLoc {
     font-size: 3rem;
     font-weight: bold;
-    color: green;
+    color: seagreen;
     text-shadow: 0 3rem .75rem black;
 }
 
 .weatherWrapper {
     font-size: 4rem;
     font-weight: bold;
-    color: green;
+    color: seagreen;
     text-shadow: 0 3rem 0.75rem black;
 }
 
 .highAndLow {
     font-size: 1.5rem;
-    color: green;
+    color: seagreen;
     text-shadow: 0 3rem 0.75rem black;
+}
+
+.btn {
+    font-weight: bold;
 }
