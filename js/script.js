@@ -8,6 +8,7 @@ $(document).ready(function () {
   var currentTempDisplay = document.getElementById("tempDisplay");
   var fButton = document.getElementById("fahrBtn");
   var cButton = document.getElementById("celsBtn");
+
   var options = {
     enableHighAccuracy: true,
     timeout: 5000,

@@ -6,20 +6,20 @@ html {
     font-size: 3rem;
     font-weight: bold;
     color: seagreen;
-    text-shadow: 0 3rem .75rem black;
+    text-shadow: 0 3rem .75rem grey;
 }
 
 .weatherWrapper {
     font-size: 4rem;
     font-weight: bold;
     color: seagreen;
-    text-shadow: 0 3rem 0.75rem black;
+    text-shadow: 0 3rem 0.75rem grey;
 }
 
 .highAndLow {
     font-size: 1.5rem;
     color: seagreen;
-    text-shadow: 0 3rem 0.75rem black;
+    text-shadow: 0 3rem 0.75rem grey;
 }
 
 .btn {
