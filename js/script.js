@@ -50,7 +50,7 @@ $(document).ready(function () {
 
         fButton.addEventListener("click", function () {
           toFahr();
-        })
+        });
 
         function toFahr() {
           currentTempDisplay.textContent = Math.floor((data.main.temp * 1.8) + 32);
@@ -62,7 +62,7 @@ $(document).ready(function () {
 
         cButton.addEventListener("click", function () {
           toCels();
-        })
+        });
 
         function toCels() {
           currentTempDisplay.textContent = Math.floor(data.main.temp);
@@ -72,7 +72,7 @@ $(document).ready(function () {
           cButton.classList.add("active");
         }
       }
-    })
+    });
   }
 
   function error(err) {
