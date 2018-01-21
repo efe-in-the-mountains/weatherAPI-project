@@ -38,7 +38,7 @@ $(document).ready(function () {
         city.textContent = data.name;
         country.textContent = data.sys.country;
         initTempUnit();
-        icon.classList.add("owf-" + data.weather[0].id);
+        // icon.classList.add("owf-" + data.weather[0].id);
 
         function initTempUnit() {
           if (data.sys.country === "US") {

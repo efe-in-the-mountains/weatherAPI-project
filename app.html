@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="location">
+                <span id="cityDisplay">city</span>
+                <span id="countryDisplay"></span>
+        </div>
+        <div class="temps">
+                <i class="fa fa-arrow-down "></i><span id="lows">low</span>&deg;
+                <span id="tempDisplay" class="current-temp">00</span>&deg;
+                <i class="fa fa-arrow-up"></i><span id="highs">high</span>&deg;
+        </div>
+        <div class="btns">
+            <button id="celsBtn" class="btn active">C&deg;</button>
+            <button id="fahrBtn" class="btn">F&deg;</button>
+        </div>
+    </div>
+    
+    <script src="https://use.fontawesome.com/fd56ccca38.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.app-container {
+    display: grid;
+    grid-template-rows: [loc-start] 4rem [loc-end temp-start] 3rem [temp-end btn-start] 3rem [btn-end];
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: .75rem;
+    width: 30vw;
+    border: .25rem dashed steelblue;
+}
+
+.location {
+    grid-row: loc; 
+    grid-column: span 4;
+    font-size: 2.75rem;
+    text-align: center;
+}
+
+.temps {
+    grid-row: temp;
+    grid-column: span 4;
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.current-temp {
+    font-size: 2.75rem;
+    font-weight: bold;
+}
+
+.btns {
+    grid-row: btn;
+    grid-column: span 4; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn {
+    border: .25rem solid black;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.active {
+    background-color: steelblue;
+}

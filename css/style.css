@@ -9,7 +9,7 @@ html {
     text-shadow: 0 3rem .75rem grey;
 }
 
-.weatherWrapper {
+.currentTemp {
     font-size: 4rem;
     font-weight: bold;
     color: seagreen;
