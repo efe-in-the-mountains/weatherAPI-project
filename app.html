@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,39 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
     <div class="app-container">
         <div class="location">
-                <span id="cityDisplay">city</span>
-                <span id="countryDisplay"></span>
+            <span id="cityDisplay">city</span>
+            <span id="countryDisplay"></span>
+        </div>
+        <div class="description">
+            <img src="" alt="weather icon" id="weatherIcon"/>
+            <span id="descriptionDisplay"></span>
         </div>
         <div class="temps">
-                <i class="fa fa-arrow-down "></i><span id="lows">low</span>&deg;
-                <span id="tempDisplay" class="current-temp">00</span>&deg;
-                <i class="fa fa-arrow-up"></i><span id="highs">high</span>&deg;
+            <div>
+                <i class="fa fa-arrow-down "></i>
+                <span id="lows">low</span>&deg;
+            </div>
+            <div>
+                <span class="current-temp"><span id="tempDisplay">00</span>&deg;</span>
+            </div>
+            <div>
+                <i class="fa fa-arrow-up"></i>
+                <span id="highs">high</span>&deg;
+            </div>
         </div>
         <div class="btns">
-            <button id="celsBtn" class="btn active">C&deg;</button>
-            <button id="fahrBtn" class="btn">F&deg;</button>
+            <button id="celsBtn" class="btn rounded-left active">C&deg;</button>
+            <button id="fahrBtn" class="btn rounded-right">F&deg;</button>
         </div>
     </div>
-    
+
     <script src="https://use.fontawesome.com/fd56ccca38.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

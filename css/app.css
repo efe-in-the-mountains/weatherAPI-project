@@ -4,11 +4,14 @@ html {
 
 .app-container {
     display: grid;
-    grid-template-rows: [loc-start] 4rem [loc-end temp-start] 3rem [temp-end btn-start] 3rem [btn-end];
+    grid-template-rows: [loc-start] 4rem [loc-end desc-start] 2rem [desc-end temp-start] 3rem [temp-end btn-start] 3rem [btn-end];
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: .75rem;
     width: 30vw;
-    border: .25rem dashed steelblue;
+    border: .25rem solid steelblue;
+    border-radius: .75rem;
+    margin: auto;
+    padding: 1rem 2rem;
 }
 
 .location {
@@ -18,18 +21,28 @@ html {
     text-align: center;
 }
 
-.temps {
-    grid-row: temp;
+.description {
+    grid-row: desc;
     grid-column: span 4;
     font-size: 1.75rem;
+    text-align: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+.temps {
+    grid-row: temp;
+    grid-column: span 4;
+    font-size: 2.25rem;
+    display: flex;
+    justify-content: space-around;
+}
+
 .current-temp {
     font-size: 2.75rem;
     font-weight: bold;
+
 }
 
 .btns {
@@ -46,8 +59,17 @@ html {
     color: whitesmoke;
     font-size: 2rem;
     font-weight: bold;
+    transition: all .2s ease-in-out;
 }
 
 .active {
     background-color: steelblue;
+}
+
+.rounded-left {
+    border-radius: .75rem 0 0 .75rem;
+}
+
+.rounded-right {
+    border-radius: 0 .75rem .75rem 0;
 }

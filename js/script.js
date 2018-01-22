@@ -1,8 +1,10 @@
 $(document).ready(function () {
 
-  var icon = document.getElementById("owfIcon");
+  
   var city = document.getElementById("cityDisplay");
   var country = document.getElementById("countryDisplay");
+  var icon = document.getElementById("weatherIcon");
+  var description = document.getElementById("descriptionDisplay");
   var highs = document.getElementById("highs");
   var lows = document.getElementById("lows");
   var currentTempDisplay = document.getElementById("tempDisplay");
@@ -37,8 +39,10 @@ $(document).ready(function () {
 
         city.textContent = data.name;
         country.textContent = data.sys.country;
+        icon.src = data.weather[0].icon;
+        description.textContent = data.weather[0].description;
         initTempUnit();
-        // icon.classList.add("owf-" + data.weather[0].id);
+        
 
         function initTempUnit() {
           if (data.sys.country === "US") {
