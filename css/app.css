@@ -8,7 +8,9 @@ html {
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: .75rem;
     width: 30vw;
-    border: .25rem solid steelblue;
+    background-color: steelblue;
+    color: blanchedalmond;
+    border: .25rem solid black;
     border-radius: .75rem;
     margin: auto;
     padding: 1rem 2rem;
@@ -37,6 +39,7 @@ html {
     font-size: 2.25rem;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .current-temp {
