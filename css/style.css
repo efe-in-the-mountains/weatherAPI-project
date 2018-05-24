@@ -1,14 +1,31 @@
 html {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif; 
+    background-color: #0d0d0d;
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../img/sky.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    margin: 0;
+    overflow: hidden;
+}
+
+.body-container {
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+}
 .app-container {
     display: grid;
     grid-template-rows: [loc-start] 4rem [loc-end desc-start] 2rem [desc-end temp-start] 3rem [temp-end btn-start] 3rem [btn-end];
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: .75rem;
-    max-width: 22rem;
-    background-color: steelblue;
+    max-width: 50rem;
+    
     color: blanchedalmond;
     border: .25rem solid black;
     border-radius: .75rem;
